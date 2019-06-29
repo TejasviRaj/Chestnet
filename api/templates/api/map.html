@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_07021dc2013746d38ef1ceee3534b970 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_07021dc2013746d38ef1ceee3534b970" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_07021dc2013746d38ef1ceee3534b970 = L.map(
+                                  'map_07021dc2013746d38ef1ceee3534b970',
+                                  {center: [27.617425,85.526688],
+                                  zoom: 11,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_ce5d200f3414406db49cc48e463e1116 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(map_07021dc2013746d38ef1ceee3534b970);
+        
+    
+
+            var marker_85aadf0c829d400e96c5c83153814f68 = L.marker(
+                [27.617425,85.526688],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_07021dc2013746d38ef1ceee3534b970);
+            
+    
+
+                var icon_7eb862804b024b21b73c7a2649069778 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_85aadf0c829d400e96c5c83153814f68.setIcon(icon_7eb862804b024b21b73c7a2649069778);
+            
+    
+            var popup_8e414d289180460985900cc4ecb1d792 = L.popup({maxWidth: '300'});
+
+            
+                var html_96f206541e4340a9b7b844a4232820ff = $('<div id="html_96f206541e4340a9b7b844a4232820ff" style="width: 100.0%; height: 100.0%;">     <h5>Rainfall: 1711.0 mm<br>     Temperature: 16.7 °C<br>     Altitude: 1553.0 m<br>     </div>')[0];
+                popup_8e414d289180460985900cc4ecb1d792.setContent(html_96f206541e4340a9b7b844a4232820ff);
+            
+
+            marker_85aadf0c829d400e96c5c83153814f68.bindPopup(popup_8e414d289180460985900cc4ecb1d792);
+
+            
+        
+</script>

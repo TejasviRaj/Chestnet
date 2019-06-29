@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+{% load static %}
+
+  <title> Chestnet </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'api/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="{%static 'api/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{%static 'https://fonts.googleapis.com/css?family=Varela+Round' %}" rel="stylesheet">
+  <link href="{%static 'https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'api/css/style.css' %}">
+
+  <!-- Custom styles for this template -->
+  <link href="{%static 'api/css/grayscale.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"> Home </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Upload</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projects">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">CHESTNET</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">Chest Disease Classification Using Convolutional Neural Network</h2>
+        <a href="#about" class="btn btn-primary js-scroll-trigger">Upload Image</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+             <form action="upload.php" method="POST">
+  <input type="file" size="1000" width="100" required >
+  <p>Drag your files here or click in this area.</p>
+
+  <button type="submit">Upload</button>
+</form>
+        </div>
+      </div>
+      <img src="{% static 'api/img/ipad.png'  %}" class="img-fluid" alt="">
+    </div>
+
+
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section bg-light">
+    <div class="container">
+
+      <!-- Featured Project Row -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-8 col-lg-7">
+          <img class="img-fluid mb-3 mb-lg-0" src="{% static 'api/img/bg-masthead.jpg' %}" alt="">
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h4>About the project</h4>
+            <p class="text-black-50 mb-0"> An Image Processing Based Classifier that detects the
+diseases in the Chest X-ray. It is a project that aims to
+develop a model to diagnose chest disease from
+chest X-Ray. It uses Convolutional Neural Network
+based model which takes chest X-Ray image as input.
+On the basis of input, model decides whether the
+patient is healthy or unhealthy and also determines the
+probable 14 thorax diseases if unhealthy.  </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project One Row -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="{% static 'api/img/demo-image-01.jpg' %}" alt="">
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-white">Objective</h4>
+                <p class="mb-0 text-white-50">To study the relevance of data from other countries in the context of NepaL</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Two Row -->
+      <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="{% static 'api/img/demo-image-02.jpg' %}" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-white">Scope</h4>
+                <p class="mb-0 text-white-50">Supportive Technology to the current manual method of diagnosis.</p>
+                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Signup Section -->
+<!--  <section id="signup" class="signup-section">-->
+<!--    <div class="container">-->
+<!--&lt;!&ndash;      <div class="row">&ndash;&gt;-->
+<!--        <div class="col-md-10 col-lg-8 mx-auto text-center">-->
+
+<!--&lt;!&ndash;      <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;          <h2 class="text-white mb-5"></h2>&ndash;&gt;-->
+<!--&lt;!&ndash;          <h1 class="text-white mb-5">Want a Chest</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;          <h1 class="text-white mb-5">Diagnosis Sysytem?</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;          <h2 class="text-white mb-5">Contact us</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <h1 class="text-white mb-5">Diagnosis Sysytem?</h1>&ndash;&gt;-->
+
+
+
+
+
+<!--&lt;!&ndash;          <form class="form-inline d-flex">&ndash;&gt;-->
+<!--&lt;!&ndash;            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">&ndash;&gt;-->
+<!--&lt;!&ndash;            <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>&ndash;&gt;-->
+<!--&lt;!&ndash;          </form>&ndash;&gt;-->
+
+<!--        </div>-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--    </div>-->
+<!--  </section>-->
+
+  <!-- Contact Section -->
+  <section class="contact-section bg-black" id="contact">
+    <h1 class="text-white mb-5" align="center">Contact</h1>-->
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Tejasvi Raj Pant</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">9803919199 <br/> tejpant@gmail.com </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Tribikram Panthi</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">9841999999 <br/> baklol@gmail.com </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Milan Maharjan</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">9841999999 <br/> baklol@gmail.com </div>
+            </div>
+          </div>
+        </div>
+
+            <div class="col-md-3 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Ravikiran Aryal</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">9841999999 <br/> baklol@gmail.com</div>
+            </div>
+          </div>
+        </div>
+
+         <div class="social d-flex justify-content-center">
+        <a href="#" class="mx-2">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      </div>
+      </div>
+
+
+
+
+
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      Copyright &copy; Team SEDRA
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'api/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'api/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{% static 'api/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'api/js/grayscale.min.js' %}"></script>
+<script src="{% static 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js' %}"></script>
+
+
+
+    <script  src="{% static 'api/js/script.js' %}"></script>
+
+</body>
+
+</html>
