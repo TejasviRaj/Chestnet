@@ -22,6 +22,19 @@
   <!-- Custom styles for this template -->
   <link href="{%static 'api/css/grayscale.min.css' %}" rel="stylesheet">
 
+    <script>
+    function loadDoc()
+    {
+
+      var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+
+
+<!--      alert(URL.createObjectURL(event.target.files[0]));-->
+    }
+
+  </script>
+
 </head>
 
 <body id="page-top">
@@ -66,12 +79,16 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-             <form action="upload.php" method="POST">
-  <input type="file" size="1000" width="100" required >
-  <p>Drag your files here or click in this area.</p>
+             <form>
+  <input type="file" size="1000" width="100" required name="image" id="image" onchange="loadDoc(event)" accept="image/*">
+<p id="para">Drag your files here or click in this area.</p>-->
+               <img id="output" width="200" />
 
-  <button type="submit">Upload</button>
-</form>
+<!--<button type="submit"  id="submit" value="Submit" >Upload</button>-->
+<!--                           <button onclick="loadDoc()" id="button">Upload</button>-->
+          </form>
+
+
         </div>
       </div>
       <img src="{% static 'api/img/ipad.png'  %}" class="img-fluid" alt="">
