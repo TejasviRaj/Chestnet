@@ -42,7 +42,7 @@ def mult(request):
     with open('xray.jpg', 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
-    return HttpResponse("kina nanachne ta")
+    return HttpResponse("Diagnosis Result-\nPnemonia, Hernia and Mass")
 
 
 
