@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function load(){
+            val=document.getElementById("kuro").value;
+            alert(val);
+<!--            alert(val+2);-->
+<!--            alert("bye");-->
+
+        var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("demo").innerHTML = this.responseText;
+        }
+      };
+       var data = "{{ csrf_token }}";
+
+      xhttp.open("POST", "/second/");
+        xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+
+
+      xhttp.send("csrfmiddlewaretoken="+ "u4J5T43M6LNTJ92qpjn5MVqN0urVu1SvrcRA2LJws00XXtmKjlGpIJOhDnWcWgJW"+ "&val="+"u4J5T43M6LNTJ92qpjn5MVqN0urVu1SvrcRA2LJws00XXtmKjlGpIJOhDnWcWgJW");
+
+      }
+
+
+       function im() {
+        alert(document.getElementById("kuro").value);
+    }
+    </script>
+
+
+</head>
+
+
+
+<body>
+<p id="demo"> </p>
+<!--<input type="file" id="kuro" onchange="im()">-->
+<!--<button type="button" onclick="load()"> Submit </button>-->
+
+
+<form action="/mult/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+  First name: <input type="file" name="file" value="file">
+  <input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>
