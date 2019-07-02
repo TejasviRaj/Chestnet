@@ -39,7 +39,7 @@ def second(request):
 def mult(request):
     f= request.FILES['file']
 
-    with open('keshav.jpg', 'wb+') as destination:
+    with open('xray.jpg', 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
     return HttpResponse("kina nanachne ta")

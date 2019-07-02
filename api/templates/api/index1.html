@@ -17,7 +17,7 @@
   <link href="{%static 'api/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
   <link href="{%static 'api/css/font1.css' %}" rel="stylesheet">
   <link href="{%static 'api/css/font2.css' %}" rel="stylesheet">
-<!--  <link rel="stylesheet" href="{% static 'api/css/style.css' %}">-->
+  <link rel="stylesheet" href="{% static 'api/css/style.css' %}">
 
   <!-- Custom styles for this template -->
   <link href="{%static 'api/css/grayscale.min.css' %}" rel="stylesheet">
@@ -132,7 +132,7 @@
              <form method="POST" enctype="multipart/form-data" id="fileUploadForm">
                    {% csrf_token %}
 
- <input type="file" name="file"><br/><br/>
+ <input type="file" name="file" id="file"><br/><br/>
 <!--    <input type="file" name="files"/><br/><br/>-->
 
                <p id="para">Drag your files here or click in this area.</p>-->
