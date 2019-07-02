@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .predictions import predict
 import base64
 import re
 
@@ -42,7 +43,15 @@ def mult(request):
     with open('xray.jpg', 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
-    return HttpResponse("Diagnosis Result-\nPnemonia, Hernia and Mass")
+
+    data=predict()
+
+    if(len(data)==1):
+        data=data[0]
+    else:
+        data =', '.join(data[:-1]) + ' and ' + data[-1]
+    return HttpResponse("Diagnosis Result:\r\n"+data)
+
 
 
 
