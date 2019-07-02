@@ -19,6 +19,12 @@ form p{
   font-family: Arial;
 }
 
+#result{
+color:blue;
+font-weight:bold;
+font-family: 'Varela Round';
+}
+
 #file{
   margin: 0;
   padding: 200;
