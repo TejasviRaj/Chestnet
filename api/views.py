@@ -42,7 +42,7 @@ def mult(request):
     with open('keshav.jpg', 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
-    return HttpResponse("lol")
+    return HttpResponse("kina nanachne ta")
 
 
 
