@@ -40,11 +40,16 @@ def second(request):
 def mult(request):
     f= request.FILES['file']
 
-    with open('xray.jpg', 'wb+') as destination:
+    print("hello")
+
+    with open(request.FILES['file'].name, 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
 
-    data=predict()
+    data=predict(request.FILES['file'].name)
+    print(data)
+    print(request.FILES['file'].name)
+    # data=['abc','cde']
 
     if(len(data)==1):
         data=data[0]
