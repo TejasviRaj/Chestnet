@@ -20,9 +20,9 @@ m=None
 
 def predict(file_name):
     #if (not m):
-    # global m
-    # if (not m):
-    m=Model()
+    global m
+    if (not m):
+        m=Model()
     print ("from predictions",file_name)
     return (m.predict(file_name))
 
@@ -38,7 +38,7 @@ class Model:
         self.model.compile(optimizer=optimizer, loss="binary_crossentropy")
         self.model.load_weights("weight.h5")
         self.class_names=["Atelectasis","Cardiomegaly","Effusion","Infiltration","Mass","Nodule","Pneumonia","Pneumothorax","Consolidation","Edema","Emphysema","Fibrosis","Pleural_Thickening","Hernia"]
-        self.threshold ={"Atelectasis":0.10022616982460021973,"Cardiomegaly":4.9802322387695312e-12,"Effusion":5.1021575927734375e-01,"Infiltration":0.103368943929672241,"Mass":2.115964889526367e-25,"Nodule":7.718801498413086e-06,"Pneumonia":5.960464477539063e-1,"Pneumothorax":2.980232238769531e-02,"Consolidation":6.467103958129883e-05,"Edema":2.9802322387695312e-08,"Emphysema":2.9802322387695312e-08,"Fibrosis":2.9802322387695312e-08,"Pleural_Thickening":3.2782554626464844e-07,"Hernia":0.5}
+        self.threshold ={"Atelectasis":0.0002195,"Cardiomegaly":4.9802322387695312e-12,"Effusion":0.00013415,"Infiltration":0.103368943929672241,"Mass":6.8e-07,"Nodule":7.718801498413086e-06,"Pneumonia":5.960464477539063e-1,"Pneumothorax":2.980232238769531e-02,"Consolidation":6.467103958129883e-05,"Edema":2.9802322387695312e-08,"Emphysema":2.9802322387695312e-08,"Fibrosis":2.9802322387695312e-08,"Pleural_Thickening":3.2782554626464844e-07,"Hernia":0.5}
 
     def predict(self,file_name):
         print("from predict", file_name)
@@ -46,6 +46,7 @@ class Model:
         im=self.load_image(file_name)
         im=self.transform_batch_images(im)
         p = self.model.predict(im)
+        print(p)
 
         counter = 0
         diseases = []
